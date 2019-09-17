@@ -1,0 +1,14 @@
+html,
+body {
+  box-sizing: border-box;
+  color: $c-main;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: $main-size;
+  line-height: 1.5em;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

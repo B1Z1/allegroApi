@@ -1,0 +1,9 @@
+/* Libraries */
+@import "../../node_modules/reset-css/sass/reset";
+
+/* Shared */
+@import "./shared/variables";
+@import "./shared/base";
+
+/* Modules */
+@import "./modules/Window/style.scss";
