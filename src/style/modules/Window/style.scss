@@ -1,12 +1,13 @@
 /* Module: Window */
 .m-Window {
   position: fixed;
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 600px;
   top: 0;
   right: 0;
   padding: 32px;
   background-color: $c-main-1;
   border-bottom: 1px solid $c-main-2;
   border-left: 1px solid $c-main-2;
+  overflow-y: auto;
 }

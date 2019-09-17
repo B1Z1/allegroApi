@@ -1,0 +1,46 @@
+/* Component: Product Card */
+.c-ProductCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px;
+  background-color: $c-main-3;
+  border: 1px solid $c-main-2;
+  text-decoration: none;
+  color: $c-main;
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+
+  /* Elements of Component */
+  &__img {
+    position: relative;
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding: 4px;
+    border: 1px solid $c-main-1;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__desc {
+    flex: 0 0 60%;
+    max-width: 60%;
+    text-align: right;
+  }
+  &__name {
+    font-weight: 600;
+  }
+  &__price {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  &__sells {
+    opacity: 0.3;
+  }
+}
