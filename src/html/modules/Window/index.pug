@@ -1,4 +1,6 @@
-.m-Window
-  .m-Window__wrapper
-    include ../../components/ProductCard/index.pug
-  a.m-Window__login(href="#" data-window-login) Zaloguj się do Allegro
+.m-Window(data-js="Window")
+  h2.m-Window__notfound(data-window-notfound) Nic nie znaleziono
+  .m-Window__wrapper(data-window-wrapper)
+  form.m-Window__search(data-window-form)
+    input.m-Window__input(placeholder="Wyszukaj po nazwie" name="search" required)
+    button.m-Window__send Wyślij

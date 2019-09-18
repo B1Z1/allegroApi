@@ -10,8 +10,9 @@
   background-color: $c-main-3;
   border: 1px solid $c-main-2;
   text-decoration: none;
+  text-transform: capitalize;
   color: $c-main;
-  &:last-of-type{
+  &:last-of-type {
     margin-bottom: 0;
   }
 
