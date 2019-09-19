@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const NOTFOUND_ACTIVE_CLASS = "m-Window__notfound--active";
+const CLOSE_ACTIVE_CLASS = "m-Window__close--active";
 const REQUEST_HEADER_CODE = "application/vnd.allegro.public.v1+json";
 
 export class APIAllegro {
@@ -8,6 +9,8 @@ export class APIAllegro {
     this.$Window = document.querySelector("[data-window-wrapper]");
     this.$WindowForm = document.querySelector("[data-window-form]");
     this.$WindowNotFound = document.querySelector("[data-window-notfound]");
+    this.$WindowClose = document.querySelector("[data-window-close]");
+    this.$WindowInput = document.querySelector("[data-window-input]");
 
     this.currentSearchItem = "";
 
@@ -32,7 +35,15 @@ export class APIAllegro {
       method: "get"
     });
 
-    this.init();
+    if (
+      this.$Window &&
+      this.$WindowForm &&
+      this.$WindowNotFound &&
+      this.$WindowClose &&
+      this.$WindowClose &&
+      this.$WindowInput
+    )
+      this.init();
   }
 
   /**
@@ -57,6 +68,32 @@ export class APIAllegro {
         this.getListOffers();
       });
     });
+
+    this.$WindowInput.addEventListener("keyup", () => {
+      this.onInputChange();
+    });
+
+    this.$WindowClose.addEventListener("click", ev => {
+      ev.preventDefault();
+      this.clearInput();
+    });
+  }
+
+  /**
+   * @function clearInput
+   */
+  clearInput() {
+    this.$WindowInput.value = "";
+    this.$WindowClose.classList.remove(CLOSE_ACTIVE_CLASS);
+  }
+
+  /**
+   * @function onInputChange
+   */
+  onInputChange() {
+    if (this.$WindowInput.value.length > 0)
+      this.$WindowClose.classList.add(CLOSE_ACTIVE_CLASS);
+    else this.$WindowClose.classList.remove(CLOSE_ACTIVE_CLASS);
   }
 
   /**
@@ -76,6 +113,9 @@ export class APIAllegro {
     );
   }
 
+  /**
+   * @function insertProducts
+   */
   insertProducts() {
     this.$Window.innerHTML = "";
     if (this.listOfItems.length === 0) {

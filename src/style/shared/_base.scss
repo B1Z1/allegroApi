@@ -7,6 +7,26 @@ body {
   line-height: 1.5em;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $c-main-3;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $c-main-4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff7a3394;
+}
+
 *,
 *:before,
 *:after {

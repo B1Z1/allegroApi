@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "AllegroApi by Illya Mishkin",
+  "version": "1.0",
+  "description": "Aplikacja służąca do odczytywania popularnych produktów z sortowaniem według ilości zakupów",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js.1a653d8f.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "AllegroApi"
+  }
+}

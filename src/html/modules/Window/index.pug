@@ -2,5 +2,7 @@
   h2.m-Window__notfound(data-window-notfound) Nic nie znaleziono
   .m-Window__wrapper(data-window-wrapper)
   form.m-Window__search(data-window-form)
-    input.m-Window__input(placeholder="Wyszukaj po nazwie" name="search" required)
+    button.m-Window__close(data-window-close type="button")
+      img(src="../assets/images/cancel.svg" alt="Zamknij" title="Zamknij")
+    input.m-Window__input(placeholder="Wyszukaj po nazwie" name="search" data-window-input required)
     button.m-Window__send Wyślij

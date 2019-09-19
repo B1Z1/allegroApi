@@ -21,11 +21,14 @@
     position: relative;
     flex: 0 0 30%;
     max-width: 30%;
+    height: 128px;
     padding: 4px;
     border: 1px solid $c-main-1;
+    overflow: hidden;
     img {
       width: 100%;
-      object-fit: cover;
+      height: 100%;
+      object-fit: contain;
     }
   }
 
