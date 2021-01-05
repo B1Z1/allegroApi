@@ -12,7 +12,7 @@
     "build-prod": "parcel build src/html/index.pug"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "cors": "^2.8.5",
     "pug": "^2.0.4",
     "reset-css": "^4.0.1"
